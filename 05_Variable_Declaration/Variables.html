@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Declaration</title>
+    <style type="text/css">
+        h2{
+            text-align: center;
+            background-color: lightgreen;
+            padding: 5px;
+        }
+        div{
+            background-color: seagreen;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        h3{
+            background-color: red;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            padding: 20px;
+        }
+        u{
+            background-color: teal;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Variable declaration Example</h2>
+    <h1>
+        <u>create two variables and display the sum :</u>
+    </h1>
+
+        <h3 id="vinay"></h3>
+
+
+ <h1>
+     <u>find the biggest value among 3 numbers :</u>
+ </h1>
+    
+    <div>
+        <h1 id="display"> some</h1>
+    </div>
+</body>
+
+<script>
+
+    //create two variables and display the sum
+    var a = 10;
+    var b = 2;
+    var sum = a + b;
+    var output = "The sum is  " + sum;
+    console.log(output);
+    document.getElementById('vinay').innerHTML = output;
+
+    // find the biggest value among 3 numbers
+    var a = 10;
+    var b = 20;
+    var c = 30;
+    var bigval = 0;
+
+    if(a > b && a > c){
+        bigvalue = a;
+    }
+    else if(b > c){
+        bigvalue = b;
+    }
+    else{
+        bigvalue = c;
+    }
+
+output = " The Biggest Value is " + bigvalue;
+console.log(output);
+document.getElementById('display').innerHTML = output;
+
+</script>
+</html>

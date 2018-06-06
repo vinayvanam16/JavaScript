@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation</title>
+    <style>
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 5px;
+        }
+        div{
+            background-color: seagreen;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>DOM Manipulation</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+<script>
+
+    //BOM Operations
+
+    // width of the browser
+    var width = window.innerWidth;
+    var output = " The Width of the Broweser is " + width + "px";
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // height of the browser
+    var height = window.innerHeight;
+    output = " The height of the Broweser is " + height + "px";
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    // Open a new Tab
+    //open a web console and type of fallows
+    window.open();
+
+
+    // DOM Properties to get body , title , URL
+    var body  = document.body;
+    console.log(body);
+    document.getElementById('display').innerHTML = body + " ";
+
+    var title = document.title;
+    document.getElementById('display').innerHTML = title;
+    document.title = " Hacked ";
+
+    var url = document.URL;
+    console.log(output);
+    document.getElementById('display').innerHTML = url;
+
+
+    //DOM Methods
+    //document.getElementById();
+    //document.getElementsByClassName();
+    //document.getElementsByTagName();
+    //document.querySelector();
+    //document.querySelectorAll();
+
+
+    // Access and Change the Elements
+
+    //goto W3Schools web console and type the fallowing
+    // document.querySelector(" .w3-right ").innerHTML = " UiBrains is the Worled Largest Site";
+
+
+    // document.querySelector(' .intro ').innerHTML = " <h1>Hacked by vinay vanam</h1>";
+
+
+    // DOM Events
+
+</script>
+</html>

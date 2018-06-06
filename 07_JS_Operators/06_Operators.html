@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Operators</title>
+    <style type="text/css">
+        h2{
+            text-align: center;
+            background-color: lightgreen;
+            padding: 5px;
+        }
+        div{
+            background-color: seagreen;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS Operators Examples</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+<script>
+
+    // Assignment operator =
+    var num1 = 20;
+    console.log(num1);
+    var output = " Assignment Operator : " + num1;
+    document.getElementById('display').innerHTML = output;
+
+    // Arithmetic operators + - * /
+    var a = 10;
+    var b = 50;
+    var sum = a + b;
+    output = " The Sum is : " + sum;
+    document.getElementById('display').innerHTML = output;
+
+
+    // Short hand math += , -= , *= , /=
+    var a = 10;
+    var b = 20;
+    var sum = a + b;
+    var result = 0;
+
+    //var result = result +sum;
+
+    result += sum;
+    output = " The Sum is : " + result;
+    document.getElementById('display').innerHTML = output;
+
+
+    // Conditional operators < , > , <= , >= , != 
+    var age = 20;
+    var isMarried = true;
+    if(age >= 30 &&  isMarried){
+        output = "Get Marry";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }  
+    else{
+        output = "Find a best match";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }
+
+
+    // Unary Operator ++ , -- (pre , post)
+    var a = 10;
+    a = a + 1; //long way
+    a++; //short way
+
+
+    // Logical operators AND , OR
+    var courseCompleted = true;
+    var gotAJob = true;
+    if(courseCompleted && gotAJob){
+        output = "Go to Goa and Enjoy";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }
+    else{
+        output = "keep Typing";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }
+
+
+    // String Concatenation Operator
+    var a = 10;
+    var b = "23";
+    var c = 54;
+    output=a+b;
+    console.log(output);//1023
+
+    output = a + c + b ; //6423
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    // Ternary operator (? :)
+    var a = 10;
+    var b = 20;
+    var big = 0;
+    (a > b)? big = a : big = b;
+    output = "Big Value is :"+ big;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    // Type of operator
+    var somevar;
+    output = typeof somevar; //undefind
+
+    somevar = 10;
+    output = typeof somevar; //number
+
+    somevar = "ABC";
+    output = typeof somevar; //string
+
+    somevar = true;
+    output = typeof somevar; //boolean
+
+    somevar = null;
+    output = typeof somevar; //object
+
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+
+    // Type coercion operator (automatic type conversion)
+
+
+
+    // == operator
+
+    var num1 = 10;
+    var num2 = "10";
+    if(num1 == num2){
+        output = "Both are Equal";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }
+    else{
+        output = "Both are Not Equal";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }
+
+
+    // === operator
+     var num1 = 10;
+    var num2 = "10";
+    if(num1 === num2){
+        output = "Both are Equal";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }
+    else{
+        output = "Both are Not Equal";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }
+
+
+
+
+</script>
+</html>

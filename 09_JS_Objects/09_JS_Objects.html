@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects</title>
+    <style type="text/css">
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 5px;
+        }
+        div{
+            background-color: seagreen;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS Objests Examples</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+
+<script>
+
+    //creation of objects
+    var obj = {};
+    var output = " " + typeof obj;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    //Adding properties to objects
+    var employee = {};
+    employee.name = "vinay";
+    employee.designation = "TeamLead";
+    console.log(employee);
+
+    //Retrieving properties of objects
+    var empName = employee.name;
+    output = "EmpName : " +empName;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    //declaring Object Literals
+    var employee1 = {
+        name : "john",
+        age : 40,
+        designation : "manager",
+        50 : "something"
+    };
+    console.log(employee1);
+
+    //Access existing properties
+    console.log(employee1.name); // john
+    document.getElementById('display').innerHTML = employee1. name;
+
+
+    //Access Non Existing Properties
+    output = employee1.salary; // undefind
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // Usage of Dot and [] notations
+    output = employee1["name"]; //john
+
+    // use of [] notation where dot is not used for invalid identifiers
+    output = employee1["50"]; //not to be used
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    // use of [] notation for accessing dynamic properties
+    var emp = {
+        name : "abc",
+        age : 40
+    };
+
+    var myName = "age"; //dynamic value
+     //output = emp.myName;
+     output = emp[myName];
+     console.log(output);
+     document.getElementById('display').innerHTML = output;
+
+    // nested Objects creation
+    var student = {
+        name : "vinay",
+        age : 25,
+        group : "Bsc",
+        address : {
+            city : "Hyderabad",
+            state : "Telangana",
+            country : "India"
+        }
+    };
+
+
+    //Accessing them using dot notation
+    output = student.address.city;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+
+    //Accessing them using mix of dot and [] notation
+    output = student.address["state"];
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    // Add some properties to nested object and access them
+    student.address.street = "Ameerpet";
+    output = student.address.street;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // === operator demo for objects (if pointing to same location in memory)
+    var student1 = {
+        name : 'abc',
+        age : 25
+    };
+
+    var student2 = {
+        name : 'abc',
+        age : 25
+    };
+    student2 = student1;
+
+    if(student1 === student2){
+        output = "Both are Equal";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }
+    else{
+        output = "Both are Not Equal";
+        console.log(output);
+        document.getElementById('display').innerHTML = output;
+    }
+
+
+    /* revisiting undefined vs null for objects
+     if no property -> undefined
+     if exists and with value null -> null  */
+
+
+    // deleting a property from an object
+    delete student1.name;
+
+
+
+</script>
+</html>

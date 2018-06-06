@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Math & Date</title>
+    <style type="text/css">
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 5px;
+        }
+        div{
+            background-color: seagreen;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+        .blue{
+            background: darkblue;
+            font-size: 45px;
+            padding: 5px;
+            width: 600px;
+            margin-left: 400px;
+        }
+        .cyan{
+            background: orangered;
+            font-size: 45px;
+            padding: 5px;
+            width: 600px;
+            margin-left: 400px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<h2>JS Math & Date</h2>
+<div>
+    <h1 id="display"></h1>
+</div>
+<div class="blue">
+    <p>India</p>
+    <h1 id="clock">02:12:00 PM </h1>
+</div>
+
+<div class="cyan">
+    <p>USA</p>
+    <h1 id="us_clock">02:12:00 PM </h1>
+</div>
+
+
+
+</body>
+
+<script>
+    /*
+        Math Object Examples
+
+     */
+
+    // Math PI and Sqrt
+    var PI = Math.PI;
+    var output = "The PI value is is ; " + PI;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    var sqrt16 = Math.sqrt(16);
+    var output = "The Sqrt of 16 is : " + sqrt16;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+
+    // find the min of 4 numbers
+    var min = Math.min(10,30,5,25,80);
+    output = " The min of 10,30,5,25,80 is : " + min;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // find the Max of 4 numbers
+    var max = Math.max(10,30,5,25,80);
+    output = " The max of 10,30,5,25,80 is : " + max;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    // find the 'x' to the power of 'y' value, ex: 2^4
+    var twoPow4 = Math.pow(2,4);
+    output = " 2 ^ 4 is : " + twoPow4;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+
+    // generate the random numbers from 0 to 100
+    var random = Math.round(Math.random() * 10000 ); //0.0 - 1.0
+    output = " The Random Value is : " + random;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+
+    /* For more details about Math Object, please have a look at
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+    */
+
+    /*
+        Date Object Examples
+
+     */
+
+    // get today's date
+    var today = new Date();
+    output = " Today is : " + today;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    //get custom Date
+    var customDate = today.getDate() + " / " +
+                     (today.getMonth()+1) + " / " +
+                      today.getFullYear();
+    output = " Today date is  : " + customDate;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    //get date of the month 0 - 31 getDate()
+    var day = today.getDay();
+    var fullDay = "";
+    switch(day){
+        case 0:
+        fullDay = "Sunday";
+        break;
+        case 1:
+            fullDay = "Monday";
+            break;
+        default:
+            fullDay = "null";
+            break;
+    }
+    output = " Today is : " + fullDay;
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    //get day of the week 0 - 6 getDay()
+
+    // get full day of the week using switch statement
+
+
+    /* For More Details about Date() please have a look at
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+    */
+    //display today date and time
+    function displayDate() {
+        var today = new Date();
+        var options = {timeZone: "Asia/Kolkata"};
+        var currentTime = today.toLocaleTimeString('en-US' , options);
+        document.getElementById('clock').innerHTML = currentTime;
+    }
+    displayDate();
+    setInterval(displayDate,1000);
+
+    //display us date
+
+    function displayUSDate() {
+        var today = new Date();
+        var options = {timeZone: "America/New_York"};
+        var currentTime = today.toLocaleTimeString('en-US' , options);
+        document.getElementById('us_clock').innerHTML = currentTime;
+    }
+    displayUSDate();
+    setInterval(displayUSDate,1000);
+
+
+</script>
+</html>
